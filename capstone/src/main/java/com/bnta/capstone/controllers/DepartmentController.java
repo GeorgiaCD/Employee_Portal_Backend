@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("departments")
 public class DepartmentController {
@@ -22,10 +24,12 @@ public class DepartmentController {
     @Autowired
     EmployeeService employeeService;
 
+//    SHOW ROUTE
+
 //    GET LEAD EMPLOYEE
-    @GetMapping(value = "leademployee/{id}")
-    public ResponseEntity<Employee> getLeadEmployee(@PathVariable int id) {
-        Employee foundLeadEmployee = employeeService.findEmployee(id);
+    @GetMapping(value = "/lead_employee/{id}")
+    public ResponseEntity<Optional<Employee>> getLeadEmployeeByDepartmentId(@PathVariable int id) {
+        Optional<Employee> foundLeadEmployee = departmentService.findLeadEmployeeByDepartmentId(id);
         return new ResponseEntity<>(foundLeadEmployee, HttpStatus.OK);
     }
 

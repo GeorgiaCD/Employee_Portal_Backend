@@ -18,6 +18,8 @@ public class Department {
     @Column
     private String name;
 
+    @OneToMany(mappedBy = "employee")
+    @JsonIgnoreProperties({"employee"})
     @Column(name = "lead_employee")
     private Employee leadEmployee;
 
@@ -28,10 +30,10 @@ public class Department {
     public Department() {
     }
 
-    public Department(int id, String name, Employee leadEmployee) {
+    public Department(int id, String name) {
         this.id = id;
         this.name = name;
-        this.leadEmployee = leadEmployee;
+        this.leadEmployee = null;
         this.employees = new ArrayList<>(); //not sure if this is correct
     }
 
