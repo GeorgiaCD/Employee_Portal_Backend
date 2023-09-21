@@ -1,8 +1,6 @@
 package com.bnta.capstone.models;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,26 +9,42 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private int id;
 
+    @Column
     private String name;
 
-    private String contactNumber;
+    @Column
+    private String email;
 
+    @Column
     private String password;
 
+    @Column(name = "contact_number")
+    private String contactNumber;
+
+
+    @Column(name = "job_title")
     private String jobTitle;
 
+//    manyToOne
+    @Column(name = "department_id")
     private int departmentId;
 
+    @Column(name = "hourly_wage")
     private int hourlyWage;
 
+// One to many
+//    @OneToMany(mappedBy = (“employeeId”))
+//    @JsonIgnore
     private List<Shift> shifts;
 
-    public Employee(String name, String contactNumber, String password, String jobTitle, int departmentId, int hourlyWage){
+    public Employee(String name, String email, String password, String contactNumber, String jobTitle, int departmentId, int hourlyWage){
         this.name = name;
-        this.contactNumber = contactNumber;
+        this.email = email;
         this.password = password;
+        this.contactNumber = contactNumber;
         this.jobTitle = jobTitle;
         this.departmentId = departmentId;
         this.hourlyWage = hourlyWage;
