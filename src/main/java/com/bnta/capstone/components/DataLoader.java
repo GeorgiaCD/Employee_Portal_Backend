@@ -9,6 +9,8 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+
 import static com.bnta.capstone.models.JobTitle.*;
 
 @Component
@@ -34,6 +36,7 @@ public class DataLoader implements ApplicationRunner {
         Department department5 = new Department("Marketing");
         Department department6 = new Department("Customer Service");
 
+        departmentRepository.saveAll(Arrays.asList(department1, department2, department3, department4, department5,department6));
 
 //        Employees
 //        Managers
@@ -52,6 +55,7 @@ public class DataLoader implements ApplicationRunner {
         Employee employee5 = new Employee("Mark","Mark@email.com","9876","+443371608374",SOLUTIONS_ARCHITECT,department5,40,false);
         Employee employee6 = new Employee("Dani","Dani@email.com","9876","+447662901805",SOLUTIONS_ARCHITECT,department6,25,false);
 
+        employeeRepository.saveAll(Arrays.asList(manager1, manager2, manager3, manager4, manager5, manager6, employee1, employee2, employee3, employee4, employee5, employee6));
     }
 
 
