@@ -36,10 +36,10 @@ public class DepartmentController {
         return new ResponseEntity<>(foundLeadEmployee, HttpStatus.OK);
     }
 
-//    GET DEPARTMENT NAME
+//    GET DEPARTMENT BY ID
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Department> getDepartmentName(@PathVariable int id) {
-        Department foundDepartment = departmentService.findDepartmentName(id);
+    public ResponseEntity<Department> getDepartmentById(@PathVariable int id) {
+        Department foundDepartment = departmentService.findDepartmentById(id);
         return new ResponseEntity<>(foundDepartment, HttpStatus.OK);
     }
 }

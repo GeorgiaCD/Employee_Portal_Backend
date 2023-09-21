@@ -24,7 +24,7 @@ public class DepartmentService {
         return this.departmentRepository.findLeadEmployeeByDepartmentId(id);
     }
 
-    public Department findDepartmentName(int id){
+    public Department findDepartmentById(int id){
         return this.departmentRepository.findById(id).get();
     }
 
