@@ -61,7 +61,10 @@ public class Employee {
         this.isManager = isManager;
     }
 
-//    Getters & Setters
+    public Employee() {
+    }
+
+    //    Getters & Setters
 
 
     public int getId() {

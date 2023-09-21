@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/employee")
+@RequestMapping("/employees")
 public class EmployeeController {
 
     @Autowired
@@ -35,6 +35,7 @@ public class EmployeeController {
     }
 
 //     Get employee by departmentId
+//    To fix: method NOT working!!!
     @GetMapping(value = "/department/{id}")
     public ResponseEntity<List<Employee>> getEmployeesByDepartmentId(int id){
         List<Employee> departmentEmployees = employeeService.findEmployeesByDepartment(id);
