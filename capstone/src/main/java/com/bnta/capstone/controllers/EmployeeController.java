@@ -21,17 +21,25 @@ public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
 
+    //    INDEX
     @GetMapping
     public ResponseEntity<List<Employee>> getEmployees(){
-        return new ResponseEntity<>(employeeService.getAllEmployees(), HttpStatus.OK);
+        return new ResponseEntity<>(employeeService.findAllEmployees(), HttpStatus.OK);
     }
 
+    //    SHOW
     @GetMapping(value = "/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable int id){
-        Employee employee = employeeService.getEmployeeById(id);
+        Employee employee = employeeService.findEmployeeById(id);
         return new ResponseEntity<>(employee, HttpStatus.OK);
     }
 
+    // Get employee by departmentId
+    @GetMapping(value = "/department/{id}")
+    public ResponseEntity<List<Employee>> getEmployeesByDepartmentId(int id){
+        List<Employee> departmentEmployees = employeeService.findEmployeesByDepartment(id);
+        return new ResponseEntity<>(departmentEmployees, HttpStatus.OK);
+    }
 
 
 }

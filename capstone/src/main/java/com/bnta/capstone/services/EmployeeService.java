@@ -14,20 +14,20 @@ public class EmployeeService {
     EmployeeRepository employeeRepository;
 
     // get all employees
-    public List<Employee> getAllEmployees() {
+    public List<Employee> findAllEmployees() {
         return employeeRepository.findAll();
     }
 
 
     // get employee by id
-    public Employee getEmployeeById(int id){
+    public Employee findEmployeeById(int id){
         return employeeRepository.findById(id).get();
     }
 
 
 
     // get employees by department id
-    public List<Employee> getEmployeeByDepartment(int id){
+    public List<Employee> findEmployeesByDepartment(int id){
        return employeeRepository.findByDepartmentId(id);
     }
 
