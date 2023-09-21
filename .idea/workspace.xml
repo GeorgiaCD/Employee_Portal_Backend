@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e09c0d8a-6b8a-49d2-b770-1af390d6cf0a" name="Changes" comment="" />
+    <list default="true" id="e09c0d8a-6b8a-49d2-b770-1af390d6cf0a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/CapstoneApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/components/DataLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/controllers/DepartmentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/controllers/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/controllers/ShiftController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/models/Department.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/models/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/models/JobTitle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/models/Shift.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/repositories/DepartmentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/repositories/EmployeeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/repositories/ShiftRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/services/DepartmentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/services/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/services/ShiftService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone/src/test/java/com/bnta/capstone/CapstoneApplicationTests.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +43,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2VhV5F36IU5lZ3nji7gRAIFVamn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -17,9 +57,31 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/francescamarshall/Documents/bnta_work/Capstone/Employee_Portal_Backend"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="CapstoneApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bnta.capstone.CapstoneApplication" />
+      <module name="capstone" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bnta.capstone.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CapstoneApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
