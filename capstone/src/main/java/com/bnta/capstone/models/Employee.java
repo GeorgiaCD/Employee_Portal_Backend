@@ -1,10 +1,12 @@
 package com.bnta.capstone.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity(name = "employees")
 public class Employee {
 
     @Id
@@ -28,9 +30,10 @@ public class Employee {
     @Column(name = "job_title")
     private String jobTitle;
 
-//    manyToOne
-    @Column(name = "department_id")
-    private int departmentId;
+    @ManyToOne
+    @JsonIgnoreProperties({"employees"})
+    @Column(name = "department")
+    private Department department;
 
     @Column(name = "hourly_wage")
     private int hourlyWage;
@@ -40,13 +43,13 @@ public class Employee {
 //    @JsonIgnore
     private List<Shift> shifts;
 
-    public Employee(String name, String email, String password, String contactNumber, String jobTitle, int departmentId, int hourlyWage){
+    public Employee(String name, String email, String password, String contactNumber, String jobTitle, Department department, int hourlyWage){
         this.name = name;
         this.email = email;
         this.password = password;
         this.contactNumber = contactNumber;
         this.jobTitle = jobTitle;
-        this.departmentId = departmentId;
+        this.department = department;
         this.hourlyWage = hourlyWage;
         this.shifts = new ArrayList<>();
     }
@@ -78,6 +81,14 @@ public class Employee {
         this.contactNumber = contactNumber;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -94,12 +105,12 @@ public class Employee {
         this.jobTitle = jobTitle;
     }
 
-    public int getDepartmentId() {
-        return departmentId;
+    public Department getDepartment() {
+        return department;
     }
 
-    public void setDepartmentId(int departmentId) {
-        this.departmentId = departmentId;
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 
     public int getHourlyWage() {
