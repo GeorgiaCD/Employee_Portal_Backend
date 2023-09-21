@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -25,6 +26,11 @@ public class DepartmentController {
     EmployeeService employeeService;
 
 //    SHOW ROUTE
+
+//    GET ALL
+    public ResponseEntity<List<Department>> getAllDepartments(){
+        return new ResponseEntity<>(departmentService.findAllDepartments(), HttpStatus.OK);
+    }
 
 //    GET LEAD EMPLOYEE
     @GetMapping(value = "/lead_employee/{id}")
