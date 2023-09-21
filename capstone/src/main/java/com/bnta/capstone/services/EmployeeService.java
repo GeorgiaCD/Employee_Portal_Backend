@@ -26,11 +26,10 @@ public class EmployeeService {
 
 
 
-    // get employees by department
-
-//    public List<Employee> getEmployeeByDepartment(){
-//       // find by department name or id??
-//    }
+    // get employees by department id
+    public List<Employee> getEmployeeByDepartment(int id){
+       return employeeRepository.findByDepartmentId(id);
+    }
 
 
 }
