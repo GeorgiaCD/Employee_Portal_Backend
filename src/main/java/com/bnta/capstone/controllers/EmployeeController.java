@@ -37,7 +37,7 @@ public class EmployeeController {
 //     Get employee by departmentId
 //    To fix: method NOT working!!!
     @GetMapping(value = "/department/{id}")
-    public ResponseEntity<List<Employee>> getEmployeesByDepartmentId(int id){
+    public ResponseEntity<List<Employee>> getEmployeesByDepartmentId(@PathVariable int id){
         List<Employee> departmentEmployees = employeeService.findEmployeesByDepartment(id);
         return new ResponseEntity<>(departmentEmployees, HttpStatus.OK);
     }
