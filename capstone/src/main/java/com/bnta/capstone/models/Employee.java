@@ -28,7 +28,7 @@ public class Employee {
 
 
     @Column(name = "job_title")
-    private String jobTitle;
+    private JobTitle jobTitle;
 
     @ManyToOne
     @JsonIgnoreProperties({"employees"})
@@ -43,7 +43,7 @@ public class Employee {
 //    @JsonIgnore
     private List<Shift> shifts;
 
-    public Employee(String name, String email, String password, String contactNumber, String jobTitle, Department department, int hourlyWage){
+    public Employee(String name, String email, String password, String contactNumber, JobTitle jobTitle, Department department, int hourlyWage){
         this.name = name;
         this.email = email;
         this.password = password;
@@ -97,11 +97,11 @@ public class Employee {
         this.password = password;
     }
 
-    public String getJobTitle() {
+    public JobTitle getJobTitle() {
         return jobTitle;
     }
 
-    public void setJobTitle(String jobTitle) {
+    public void setJobTitle(JobTitle jobTitle) {
         this.jobTitle = jobTitle;
     }
 
