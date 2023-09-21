@@ -20,11 +20,6 @@ public class Department {
     @Column
     private String name;
 
-    @OneToOne
-    @JsonIgnoreProperties({"ledDepartment"})
-    @JoinColumn(name = "lead_employee_id")
-    @NotFound(action = NotFoundAction.IGNORE)
-    private Employee leadEmployee;
 
     @OneToMany(mappedBy = "department")
     @JsonIgnoreProperties({"department"})
@@ -33,10 +28,9 @@ public class Department {
     public Department() {
     }
 
-    public Department(String name, Employee leadEmployee) {
+    public Department(String name) {
         this.name = name;
         this.employees = new ArrayList<>(); //not sure if this is correct
-        this.leadEmployee = leadEmployee;
     }
 
     public int getId() {
@@ -53,14 +47,6 @@ public class Department {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Employee getLeadEmployee() {
-        return leadEmployee;
-    }
-
-    public void setLeadEmployee(Employee leadEmployee) {
-        this.leadEmployee = leadEmployee;
     }
 
     public List<Employee> getEmployees() {

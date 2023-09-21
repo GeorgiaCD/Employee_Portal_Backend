@@ -20,9 +20,6 @@ public class DepartmentService {
         return this.departmentRepository.findAll();
     }
 
-//    public Optional<Employee> findLeadEmployeeByDepartmentId(int id){
-//        return this.departmentRepository.findLeadEmployeeByDepartmentId(id);
-//    }
 
     public Department findDepartmentById(int id){
         return this.departmentRepository.findById(id).get();

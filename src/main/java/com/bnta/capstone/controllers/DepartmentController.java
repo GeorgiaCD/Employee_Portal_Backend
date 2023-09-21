@@ -21,7 +21,7 @@ public class DepartmentController {
     @Autowired
     DepartmentService departmentService;
 
-//    SHOW ROUTE
+
 
 //    GET ALL
     @GetMapping
@@ -29,12 +29,6 @@ public class DepartmentController {
         return new ResponseEntity<>(departmentService.findAllDepartments(), HttpStatus.OK);
     }
 
-//    GET LEAD EMPLOYEE
-//    @GetMapping(value = "/lead_employee/{id}")
-//    public ResponseEntity<Optional<Employee>> getLeadEmployeeByDepartmentId(@PathVariable int id) {
-//        Optional<Employee> foundLeadEmployee = departmentService.findLeadEmployeeByDepartmentId(id);
-//        return new ResponseEntity<>(foundLeadEmployee, HttpStatus.OK);
-//    }
 
 //    GET DEPARTMENT BY ID
     @GetMapping(value = "/{id}")
@@ -42,4 +36,7 @@ public class DepartmentController {
         Department foundDepartment = departmentService.findDepartmentById(id);
         return new ResponseEntity<>(foundDepartment, HttpStatus.OK);
     }
+
+//    GET DEPARTMENT NAMES
+
 }

@@ -28,19 +28,17 @@ public class Employee {
     @Column(name = "contact_number")
     private String contactNumber;
 
-
     @Column(name = "job_title")
     private JobTitle jobTitle;
+
 
     @ManyToOne
     @JsonIgnoreProperties({"employees"})
     @JoinColumn(name = "department_id")
     private Department department;
 
-    @OneToOne(mappedBy = "leadEmployee")
-    @JsonIgnoreProperties({"leadEmployee"})
-    @NotFound(action = NotFoundAction.IGNORE)
-    private Department ledDepartment;
+    @Column(name = "is_manager")
+    private boolean isManager;
 
 
     @Column(name = "hourly_wage")
@@ -51,7 +49,7 @@ public class Employee {
 //    @JsonIgnore
 //    private List<Shift> shifts;
 
-    public Employee(String name, String email, String password, String contactNumber, JobTitle jobTitle, Department department, int hourlyWage, Department ledDepartment){
+    public Employee(String name, String email, String password, String contactNumber, JobTitle jobTitle, Department department, int hourlyWage, boolean isManager){
         this.name = name;
         this.email = email;
         this.password = password;
@@ -60,7 +58,7 @@ public class Employee {
         this.department = department;
         this.hourlyWage = hourlyWage;
 //        this.shifts = new ArrayList<>();
-        this.ledDepartment = ledDepartment;
+        this.isManager = isManager;
     }
 
 //    Getters & Setters
@@ -138,11 +136,11 @@ public class Employee {
 //        this.shifts = shifts;
 //    }
 
-    public Department getLedDepartment() {
-        return ledDepartment;
+    public boolean isManager() {
+        return isManager;
     }
 
-    public void setLedDepartment(Department ledDepartment) {
-        this.ledDepartment = ledDepartment;
+    public void setManager(boolean manager) {
+        isManager = manager;
     }
 }
