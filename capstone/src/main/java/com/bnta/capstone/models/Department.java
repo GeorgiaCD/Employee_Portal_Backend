@@ -1,5 +1,6 @@
 package com.bnta.capstone.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -20,6 +21,8 @@ public class Department {
     @Column(name = "lead_employee")
     private Employee leadEmployee;
 
+    @OneToMany(mappedBy = "employee")
+    @JsonIgnoreProperties({"employee"})
     private List<Employee> employees;
 
     public Department() {
