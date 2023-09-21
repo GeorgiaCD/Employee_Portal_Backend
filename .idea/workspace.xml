@@ -5,35 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e09c0d8a-6b8a-49d2-b770-1af390d6cf0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/CapstoneApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/components/DataLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/controllers/DepartmentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/controllers/EmployeeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/controllers/ShiftController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/models/Department.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/models/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/models/JobTitle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/models/Shift.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/repositories/DepartmentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/repositories/EmployeeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/repositories/ShiftRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/services/DepartmentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/services/EmployeeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/java/com/bnta/capstone/services/ShiftService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone/src/test/java/com/bnta/capstone/CapstoneApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bnta/capstone/components/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bnta/capstone/components/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bnta/capstone/models/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bnta/capstone/models/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bnta/capstone/components/DataLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bnta/capstone/components/DataLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bnta/capstone/models/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bnta/capstone/models/Department.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +33,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/francescamarshall/Documents/bnta_work/Capstone/Employee_Portal_Backend"
+    "last_opened_file_path": "/Users/georgiacrawford-dellar/Documents/bnta_work/capstone_project/Backend"
   }
 }]]></component>
   <component name="RunManager">

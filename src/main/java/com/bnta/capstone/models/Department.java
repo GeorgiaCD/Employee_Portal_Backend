@@ -33,8 +33,7 @@ public class Department {
     public Department() {
     }
 
-    public Department(int id, String name, Employee leadEmployee) {
-        this.id = id;
+    public Department(String name, Employee leadEmployee) {
         this.name = name;
         this.employees = new ArrayList<>(); //not sure if this is correct
         this.leadEmployee = leadEmployee;
