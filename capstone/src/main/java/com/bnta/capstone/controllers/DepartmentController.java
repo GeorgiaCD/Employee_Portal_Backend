@@ -3,7 +3,6 @@ package com.bnta.capstone.controllers;
 import com.bnta.capstone.models.Department;
 import com.bnta.capstone.models.Employee;
 import com.bnta.capstone.services.DepartmentService;
-import com.bnta.capstone.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,12 +21,10 @@ public class DepartmentController {
     @Autowired
     DepartmentService departmentService;
 
-    @Autowired
-    EmployeeService employeeService;
-
 //    SHOW ROUTE
 
 //    GET ALL
+    @GetMapping
     public ResponseEntity<List<Department>> getAllDepartments(){
         return new ResponseEntity<>(departmentService.findAllDepartments(), HttpStatus.OK);
     }
