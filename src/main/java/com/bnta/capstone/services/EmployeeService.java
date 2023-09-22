@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EmployeeService {
@@ -33,13 +34,29 @@ public class EmployeeService {
     }
 
     // check password from email
-    public Employee checkLoginDetails(LoginDTO login){
+    public Employee checkLoginDetails(LoginDTO login) {
         // check if email exist in the database
-            // if not return message    "No user found matching these details"
+//            employee true
+//        find an employee by password
+
+        Employee employee = employeeRepository.findByEmail(login.getEmail());
+
+        if(employee!=null){
+            if(employee.getPassword().equals(login.getPassword())){
+                return employee;
+            } else {return employee;}
+            }
+        return employee;
+    }
+
+
+//        "No user found matching these details";
+        // if not return message    "No user found matching these details"
         // check that the password matches the corresponding password for the email
-            // if not return message    "No user found matching these details"
+        // if not return message    "No user found matching these details"
         // return an employee object if so
-        
+
 
     }
-}
+    }
+
