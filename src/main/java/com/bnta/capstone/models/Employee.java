@@ -33,7 +33,7 @@ public class Employee {
 
 
     @ManyToOne
-    @JsonIgnoreProperties({"employees"})
+//    @JsonIgnoreProperties({"employees"})
     @JoinColumn(name = "department_id")
     private Department department;
 
