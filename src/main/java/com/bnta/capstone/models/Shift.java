@@ -12,7 +12,7 @@ public class Shift {
     @Column
     private LocalDate date;
     @Column
-    private Type type; //   need to create an enum
+    private Type type;
     @ManyToOne
     @JoinColumn(name = "employee_id")
     private Employee employee;
