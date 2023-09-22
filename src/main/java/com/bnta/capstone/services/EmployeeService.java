@@ -34,29 +34,22 @@ public class EmployeeService {
     }
 
     // check password from email
-    public Employee checkLoginDetails(LoginDTO login) {
-        // check if email exist in the database
-//            employee true
-//        find an employee by password
-
+    public Boolean checkLoginDetails(LoginDTO login) {
         Employee employee = employeeRepository.findByEmail(login.getEmail());
 
         if(employee!=null){
             if(employee.getPassword().equals(login.getPassword())){
-                return employee;
-            } else {return employee;}
+                return true;
             }
-        return employee;
+            else {return false;}
+            }
+        return false;
+    }
+
+    public Employee findEmployeeByEmail(LoginDTO login) {
+    return employeeRepository.findByEmail(login.getEmail());
     }
 
 
-//        "No user found matching these details";
-        // if not return message    "No user found matching these details"
-        // check that the password matches the corresponding password for the email
-        // if not return message    "No user found matching these details"
-        // return an employee object if so
-
-
-    }
     }
 
