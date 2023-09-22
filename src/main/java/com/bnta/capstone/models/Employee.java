@@ -45,9 +45,9 @@ public class Employee {
     private int hourlyWage;
 
 // One to many
-//    @OneToMany(mappedBy = (“employeeId”))
-//    @JsonIgnore
-//    private List<Shift> shifts;
+    @OneToMany(mappedBy = "employee")
+    @JsonIgnoreProperties({"employee"})
+    private List<Shift> shifts;
 
     public Employee(String name, String email, String password, String contactNumber, JobTitle jobTitle, Department department, int hourlyWage, boolean isManager){
         this.name = name;
