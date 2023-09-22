@@ -19,6 +19,11 @@ public class ShiftService {
         return shiftRepository.findAll();
     }
 
+//    GET SHIFT BY ID
+    public Shift findShiftById(int id){
+        return shiftRepository.findById(id).get();
+    }
+
 //    GET SHIFTS BY EMPLOYEE ID
     public List<Shift> findAllShiftsByEmployeeId(int id) {
         return shiftRepository.findByEmployeeId(id);

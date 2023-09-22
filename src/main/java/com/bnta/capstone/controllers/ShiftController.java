@@ -23,20 +23,27 @@ public class ShiftController {
         return new ResponseEntity<>(shiftService.findAllShifts(), HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<Shift> getShiftById(@PathVariable int id){
+        Shift shift = shiftService.findShiftById(id);
+        return new ResponseEntity<>(shift, HttpStatus.OK);
+    }
+
+
+    @GetMapping(value = "/employee/{id}")
     public ResponseEntity<List<Shift>> getAllShiftsByEmployeeId(@PathVariable int id){
         List<Shift> employeeSchedule = shiftService.findAllShiftsByEmployeeId(id);
         return new ResponseEntity<>(employeeSchedule, HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping(value = "/{type}")
     public ResponseEntity<List<Shift>> getShiftsByType(@RequestParam Type type){
         List<Shift> shiftByType = shiftService.findShiftsByType(type);
         return new ResponseEntity<>(shiftByType, HttpStatus.OK);
 
     }
 
-    @GetMapping
+    @GetMapping(value = "/{date}")
     public ResponseEntity<List<Shift>> getShiftsByDate(@RequestParam LocalDate date){
         List<Shift> shiftByDate = shiftService.findShiftsByDate(date);
         return new ResponseEntity<>(shiftByDate,HttpStatus.OK);
