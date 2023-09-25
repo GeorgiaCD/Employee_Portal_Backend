@@ -64,9 +64,8 @@ public class Employee {
     public Employee() {
     }
 
+
     //    Getters & Setters
-
-
     public int getId() {
         return id;
     }
@@ -131,13 +130,13 @@ public class Employee {
         this.hourlyWage = hourlyWage;
     }
 
-//    public List<Shift> getShifts() {
-//        return shifts;
-//    }
-//
-//    public void setShifts(List<Shift> shifts) {
-//        this.shifts = shifts;
-//    }
+    public List<Shift> getShifts() {
+        return shifts;
+    }
+
+    public void setShifts(List<Shift> shifts) {
+        this.shifts = shifts;
+    }
 
     public boolean isManager() {
         return isManager;
