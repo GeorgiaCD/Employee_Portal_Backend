@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface ShiftRepository extends JpaRepository<Shift, Integer> {
 
-    List<Shift> findByEmployeeId(int id);
+    List<Shift> findByEmployeeId(int EmployeeId);
 
     List<Shift> findByType(Type type);
 
