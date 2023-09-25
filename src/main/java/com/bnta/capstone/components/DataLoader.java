@@ -66,22 +66,79 @@ public class DataLoader implements ApplicationRunner {
 
 
 //    Shifts
+// morning shifts
+        Shift morningShift1 = new Shift(LocalDate.of(2023,9,01), MORNING, manager1);
+        Shift morningShift2 = new Shift(LocalDate.of(2023,9,02), MORNING, manager1);
+        Shift morningShift3 = new Shift(LocalDate.of(2023,9,03), MORNING, manager1 );
+        Shift morningShift4 = new Shift(LocalDate.of(2023,9,04), MORNING, manager2 );
+        Shift morningShift5 = new Shift(LocalDate.of(2023,9,05), MORNING, employee1 );
+        Shift morningShift6 = new Shift(LocalDate.of(2023,9,06), MORNING, employee2 );
+        Shift morningShift7 = new Shift(LocalDate.of(2023,9,07), MORNING, employee2  );
+        Shift morningShift8 = new Shift(LocalDate.of(2023,9,8), MORNING, employee6 );
+        Shift morningShift9 = new Shift(LocalDate.of(2023,9,9), MORNING, employee5  );
+        Shift morningShift10 = new Shift(LocalDate.of(2023,9,10), MORNING,manager5  );
 
-        Shift shift1 = new Shift(LocalDate.of(2023,9,01), MORNING, manager1);
-        Shift shift2 = new Shift(2023-9-02, MORNING, manager1);
-        Shift shift3 = new Shift(2023-09-03, MORNING, manager1 );
-        Shift shift4 = new Shift(2023-09-04, MORNING,  );
-        Shift shift5 = new Shift(2023-09-05, MORNING,  );
-        Shift shift6 = new Shift(2023-09-06, MORNING,  );
-        Shift shift7 = new Shift(2023-09-07, MORNING,  );
-        Shift shift8 = new Shift(2023-09-08, MORNING,  );
-        Shift shift9 = new Shift(2023-09-09, MORNING,  );
-        Shift shift10 = new Shift(2023-09-10, MORNING,  );
-        Shift shift11 = new Shift(2023-09-11, MORNING,  );
-        Shift shift12 = new Shift(2023-09-12, MORNING,  );
-        Shift shift13 = new Shift(2023-09-13, MORNING,  );
-        Shift shift14 = new Shift(2023-09-14, MORNING,  );
-        Shift shift15 = new Shift(2023-09-15, MORNING,  );
+
+        Shift morningShift11 = new Shift(LocalDate.of(2023,9,01), MORNING,manager2 );
+        Shift morningShift12 = new Shift(LocalDate.of(2023,9,03), MORNING, employee1 );
+        Shift morningShift13 = new Shift(LocalDate.of(2023,9,05), MORNING, employee2);
+        Shift morningShift14 = new Shift(LocalDate.of(2023,9,06), MORNING, employee5 );
+        Shift morningShift15 = new Shift(LocalDate.of(2023,9,9), MORNING, employee4 );
+        Shift morningShift16 = new Shift(LocalDate.of(2023,9,10), MORNING,  employee6 );
+        Shift morningShift17 = new Shift(LocalDate.of(2023,9,11), MORNING, employee3 );
+        Shift morningShift18 = new Shift(LocalDate.of(2023,9,12), MORNING, manager3 );
+        Shift morningShift19 = new Shift(LocalDate.of(2023,9,13), MORNING, manager4 );
+        Shift morningShift20 = new Shift(LocalDate.of(2023,9,14), MORNING, manager5 );
+
+
+// afternoon shifts
+        Shift afternoonShift1 = new Shift(LocalDate.of(2023,9,01), AFTERNOON,manager3 );
+        Shift afternoonShift2 = new Shift(LocalDate.of(2023,9,02), AFTERNOON, employee1 );
+        Shift afternoonShift3 = new Shift(LocalDate.of(2023,9,03), AFTERNOON, employee3 );
+        Shift afternoonShift4 = new Shift(LocalDate.of(2023,9,04), AFTERNOON, employee4 );
+        Shift afternoonShift5 = new Shift(LocalDate.of(2023,9,05), AFTERNOON, manager6);
+        Shift afternoonShift6 = new Shift(LocalDate.of(2023,9,06), AFTERNOON, employee4 );
+        Shift afternoonShift7 = new Shift(LocalDate.of(2023,9,07), AFTERNOON, employee6 );
+        Shift afternoonShift8 = new Shift(LocalDate.of(2023,9,8), AFTERNOON, manager3 );
+        Shift afternoonShift9 = new Shift(LocalDate.of(2023,9,9), AFTERNOON,  employee1);
+        Shift afternoonShift10 = new Shift(LocalDate.of(2023,9,10), AFTERNOON, employee1 );
+
+
+        Shift afternoonShift11 = new Shift(LocalDate.of(2023,9,11), AFTERNOON, employee2 );
+        Shift afternoonShift12 = new Shift(LocalDate.of(2023,9,12), AFTERNOON, manager6);
+        Shift afternoonShift13 = new Shift(LocalDate.of(2023,9,13), AFTERNOON,manager5 );
+        Shift afternoonShift14 = new Shift(LocalDate.of(2023,9,14), AFTERNOON, employee1 );
+        Shift afternoonShift15 = new Shift(LocalDate.of(2023,9,05), AFTERNOON, employee2 );
+        Shift afternoonShift16 = new Shift(LocalDate.of(2023,9,16), AFTERNOON,employee6  );
+        Shift afternoonShift17 = new Shift(LocalDate.of(2023,9,07), AFTERNOON,employee3  );
+        Shift afternoonShift18 = new Shift(LocalDate.of(2023,9,18), AFTERNOON, employee5  );
+        Shift afternoonShift19 = new Shift(LocalDate.of(2023,9,19), AFTERNOON,manager1 );
+        Shift afternoonShift20 = new Shift(LocalDate.of(2023,9,10), AFTERNOON, manager6 );
+
+
+// evening shifts
+        Shift eveningShift1 = new Shift(LocalDate.of(2023,9,01), EVENING, employee4 );
+        Shift eveningShift2 = new Shift(LocalDate.of(2023,9,02), EVENING, employee6);
+        Shift eveningShift3 = new Shift(LocalDate.of(2023,9,03), EVENING, employee3 );
+        Shift eveningShift4 = new Shift(LocalDate.of(2023,9,04), EVENING, manager2 );
+        Shift eveningShift5 = new Shift(LocalDate.of(2023,9,05), EVENING,  employee4);
+        Shift eveningShift6 = new Shift(LocalDate.of(2023,9,06), EVENING, employee5 );
+        Shift eveningShift7 = new Shift(LocalDate.of(2023,9,07), EVENING, employee6 );
+        Shift eveningShift8 = new Shift(LocalDate.of(2023,9,8), EVENING, manager2  );
+        Shift eveningShift9 = new Shift(LocalDate.of(2023,9,9), EVENING, manager1 );
+        Shift eveningShift10 = new Shift(LocalDate.of(2023,9,10), EVENING, manager6  );
+
+
+        Shift eveningShift11 = new Shift(LocalDate.of(2023,9,01), EVENING,manager5 );
+        Shift eveningShift12 = new Shift(LocalDate.of(2023,9,12), EVENING,manager6 );
+        Shift eveningShift13 = new Shift(LocalDate.of(2023,9,13), EVENING, employee1 );
+        Shift eveningShift14 = new Shift(LocalDate.of(2023,9,14), EVENING,  employee2);
+        Shift eveningShift15 = new Shift(LocalDate.of(2023,9,15), EVENING, employee3 );
+        Shift eveningShift16 = new Shift(LocalDate.of(2023,9,06), EVENING, employee6 );
+        Shift eveningShift17 = new Shift(LocalDate.of(2023,9,07), EVENING, employee4 );
+        Shift eveningShift18 = new Shift(LocalDate.of(2023,9,18), EVENING, employee5 );
+        Shift eveningShift19 = new Shift(LocalDate.of(2023,9,9), EVENING, manager1 );
+        Shift eveningShift210 = new Shift(LocalDate.of(2023,9,10), EVENING, manager4  );
 
 
 
