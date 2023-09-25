@@ -11,4 +11,6 @@ public enum JobTitle {
     WAREHOUSE_ASSOCIATE,
     HR_SPECIALIST,
     SOLUTIONS_ARCHITECT,
+
+
 }

@@ -1,5 +1,7 @@
 package com.bnta.capstone.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public enum Type {
 
     MORNING ("9am", "5pm"),
@@ -15,7 +17,8 @@ public enum Type {
         this.startTime = startTime;
         this.endTime = endTime;
     }
-    
+
+    @JsonProperty("startTime")
     public String getStartTime() {
         return startTime;
     }
@@ -24,6 +27,7 @@ public enum Type {
         this.startTime = startTime;
     }
 
+    @JsonProperty("endTime")
     public String getEndTime() {
         return endTime;
     }

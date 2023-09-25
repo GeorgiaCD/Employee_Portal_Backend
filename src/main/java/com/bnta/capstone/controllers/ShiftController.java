@@ -24,6 +24,11 @@ public class ShiftController {
         return new ResponseEntity<>(shiftService.findAllShifts(), HttpStatus.OK);
     }
 
+    @GetMapping(value="/dto")
+    public ResponseEntity<List<ShiftDTO>> getAllShiftDTOs(){
+        return new ResponseEntity<>(shiftService.findAllShiftDTOs(), HttpStatus.OK);
+    }
+
     @GetMapping(value = "/{id}")
     public ResponseEntity<Shift> getShiftById(@PathVariable int id){
         Shift shift = shiftService.findShiftById(id);

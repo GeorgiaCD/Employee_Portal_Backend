@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -19,6 +20,20 @@ public class ShiftService {
     public List<Shift> findAllShifts() {
         return shiftRepository.findAll();
     }
+
+//    GET all shifts DTOs
+    public List<ShiftDTO>  findAllShiftDTOs(){
+        List<Shift> shift = shiftRepository.findAll();
+        List<ShiftDTO> simplifedShiftDTOS = new ArrayList<>();
+        ShiftDTO shiftDTO ;
+        for(Shift shiftList : shift){
+            shiftDTO = new ShiftDTO(shiftList.getDate(),shiftList.getType(), shiftList.getEmployee());
+           simplifedShiftDTOS.add(shiftDTO);
+        }
+        return simplifedShiftDTOS;
+    }
+
+
 
 //    GET SHIFT BY ID
     public Shift findShiftById(int id){
