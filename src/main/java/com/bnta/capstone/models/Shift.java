@@ -1,5 +1,6 @@
 package com.bnta.capstone.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -17,6 +18,7 @@ public class Shift {
     private Type type;
 
     @ManyToOne
+    @JsonIgnoreProperties({"department","shifts"})
     @JoinColumn(name = "employee_id")
     private Employee employee;
 
