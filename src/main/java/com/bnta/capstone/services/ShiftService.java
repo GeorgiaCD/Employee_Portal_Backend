@@ -16,6 +16,9 @@ public class ShiftService {
     @Autowired
     ShiftRepository shiftRepository;
 
+    @Autowired
+    EmployeeService employeeService;
+
 //    GET ALL SHIFTS
     public List<Shift> findAllShifts() {
         return shiftRepository.findAll();
@@ -27,7 +30,7 @@ public class ShiftService {
         List<ShiftDTO> simplifedShiftDTOS = new ArrayList<>();
         ShiftDTO shiftDTO ;
         for(Shift shiftList : shift){
-            shiftDTO = new ShiftDTO(shiftList.getDate(),shiftList.getType(), shiftList.getEmployee());
+            shiftDTO = new ShiftDTO(shiftList.getDate(),shiftList.getType(), shiftList.getEmployee().getId());
            simplifedShiftDTOS.add(shiftDTO);
         }
         return simplifedShiftDTOS;
@@ -54,4 +57,15 @@ public class ShiftService {
     public List<Shift> findShiftsByDate(LocalDate date) {
         return shiftRepository.findByDate(date);
     }
-}
+//    add a shift method
+    public Shift saveShift(ShiftDTO shiftDTO){
+        Shift newShift = new Shift(shiftDTO.getDate(),
+                                   shiftDTO.getType(),
+                                    employeeService.findEmployeeById(shiftDTO.getEmployeeId())
+                );
+        shiftRepository.save(newShift);
+        return newShift;
+    }
+
+    }
+
