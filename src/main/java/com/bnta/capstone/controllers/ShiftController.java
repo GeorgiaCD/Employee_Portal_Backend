@@ -54,13 +54,7 @@ public class ShiftController {
         List<Shift> shiftByDate = shiftService.findShiftsByDate(date);
         return new ResponseEntity<>(shiftByDate,HttpStatus.OK);
     }
-
-    @PostMapping
-    public ResponseEntity<Shift> addShift(@RequestBody ShiftDTO shiftDTO){
-         Shift newShift = shiftService.saveShift(shiftDTO);
-        return new ResponseEntity<>(newShift, HttpStatus.OK);
-
-    }
+    
 
 
 }
