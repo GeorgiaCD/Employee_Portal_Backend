@@ -138,10 +138,13 @@ public class DataLoader implements ApplicationRunner {
         Shift eveningShift17 = new Shift(LocalDate.of(2023,9,07), EVENING, employee4 );
         Shift eveningShift18 = new Shift(LocalDate.of(2023,9,18), EVENING, employee5 );
         Shift eveningShift19 = new Shift(LocalDate.of(2023,9,9), EVENING, manager1 );
-        Shift eveningShift210 = new Shift(LocalDate.of(2023,9,10), EVENING, manager4  );
+        Shift eveningShift20 = new Shift(LocalDate.of(2023,9,10), EVENING, manager4  );
 
+       shiftRepository.saveAll(Arrays.asList(morningShift1, morningShift2, morningShift3, morningShift4, morningShift5, morningShift6, morningShift7, morningShift8, morningShift9, morningShift10, morningShift11, morningShift12, morningShift13, morningShift14, morningShift15, morningShift16, morningShift17, morningShift18, morningShift19, morningShift20));
 
+       shiftRepository.saveAll(Arrays.asList(afternoonShift1, afternoonShift2, afternoonShift3, afternoonShift4, afternoonShift5, afternoonShift6, afternoonShift7, afternoonShift8, afternoonShift9, afternoonShift10, afternoonShift11, afternoonShift12, afternoonShift13, afternoonShift14, afternoonShift15, afternoonShift16, afternoonShift17, afternoonShift18, afternoonShift19, afternoonShift20));
 
+        shiftRepository.saveAll(Arrays.asList(eveningShift1, eveningShift2, eveningShift3, eveningShift4, eveningShift5, eveningShift6, eveningShift7, eveningShift8, eveningShift9, eveningShift10, eveningShift11, eveningShift12, eveningShift13, eveningShift14, eveningShift15, eveningShift16, eveningShift17, eveningShift18, eveningShift19, eveningShift20));
     }
 
 

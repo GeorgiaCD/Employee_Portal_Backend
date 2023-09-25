@@ -1,6 +1,7 @@
 package com.bnta.capstone.services;
 
 import com.bnta.capstone.models.Shift;
+import com.bnta.capstone.models.ShiftDTO;
 import com.bnta.capstone.models.Type;
 import com.bnta.capstone.repositories.ShiftRepository;
 import org.springframework.beans.factory.annotation.Autowired;
