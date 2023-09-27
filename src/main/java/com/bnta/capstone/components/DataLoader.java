@@ -137,7 +137,7 @@ public class DataLoader implements ApplicationRunner {
         Shift eveningShift16 = new Shift(LocalDate.of(2023,9,06), EVENING, employee6 );
         Shift eveningShift17 = new Shift(LocalDate.of(2023,9,07), EVENING, employee4 );
         Shift eveningShift18 = new Shift(LocalDate.of(2023,9,18), EVENING, employee5 );
-        Shift eveningShift19 = new Shift(LocalDate.of(2023,9,9), EVENING, manager1 );
+        Shift eveningShift19 = new Shift(LocalDate.of(2023,9,9), EVENING, manager3 );
         Shift eveningShift20 = new Shift(LocalDate.of(2023,9,10), EVENING, manager4  );
 
 //        jane shifts
