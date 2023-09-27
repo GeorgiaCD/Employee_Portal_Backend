@@ -71,7 +71,7 @@ public class DataLoader implements ApplicationRunner {
         Shift morningShift2 = new Shift(LocalDate.of(2023,9,02), MORNING, manager1);
         Shift morningShift3 = new Shift(LocalDate.of(2023,9,03), MORNING, manager1 );
         Shift morningShift4 = new Shift(LocalDate.of(2023,9,04), MORNING, manager2 );
-        Shift morningShift5 = new Shift(LocalDate.of(2023,9,05), MORNING, employee1 );
+        Shift morningShift5 = new Shift(LocalDate.of(2023,9,27), MORNING, employee1 );
         Shift morningShift6 = new Shift(LocalDate.of(2023,9,06), MORNING, employee2 );
         Shift morningShift7 = new Shift(LocalDate.of(2023,9,07), MORNING, employee2  );
         Shift morningShift8 = new Shift(LocalDate.of(2023,9,8), MORNING, employee6 );
@@ -140,11 +140,21 @@ public class DataLoader implements ApplicationRunner {
         Shift eveningShift19 = new Shift(LocalDate.of(2023,9,9), EVENING, manager1 );
         Shift eveningShift20 = new Shift(LocalDate.of(2023,9,10), EVENING, manager4  );
 
+//        jane shifts
+        Shift morningShift21 = new Shift(LocalDate.of(2023,10,06), MORNING, manager1);
+        Shift morningShift22 = new Shift(LocalDate.of(2023,10,02), MORNING, manager1);
+        Shift morningShift23 = new Shift(LocalDate.of(2023,10,03), MORNING, manager1 );
+        Shift morningShift24 = new Shift(LocalDate.of(2023,10,04), MORNING, manager1 );
+        Shift morningShift25 = new Shift(LocalDate.of(2023,10,05), MORNING,manager1);
+
        shiftRepository.saveAll(Arrays.asList(morningShift1, morningShift2, morningShift3, morningShift4, morningShift5, morningShift6, morningShift7, morningShift8, morningShift9, morningShift10, morningShift11, morningShift12, morningShift13, morningShift14, morningShift15, morningShift16, morningShift17, morningShift18, morningShift19, morningShift20));
 
        shiftRepository.saveAll(Arrays.asList(afternoonShift1, afternoonShift2, afternoonShift3, afternoonShift4, afternoonShift5, afternoonShift6, afternoonShift7, afternoonShift8, afternoonShift9, afternoonShift10, afternoonShift11, afternoonShift12, afternoonShift13, afternoonShift14, afternoonShift15, afternoonShift16, afternoonShift17, afternoonShift18, afternoonShift19, afternoonShift20));
 
         shiftRepository.saveAll(Arrays.asList(eveningShift1, eveningShift2, eveningShift3, eveningShift4, eveningShift5, eveningShift6, eveningShift7, eveningShift8, eveningShift9, eveningShift10, eveningShift11, eveningShift12, eveningShift13, eveningShift14, eveningShift15, eveningShift16, eveningShift17, eveningShift18, eveningShift19, eveningShift20));
+
+        shiftRepository.saveAll(Arrays.asList(morningShift21,morningShift22, morningShift23, morningShift24, morningShift25));
+
     }
 
 
