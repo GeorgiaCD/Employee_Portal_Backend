@@ -59,10 +59,11 @@ public class DataLoader implements ApplicationRunner {
         Employee employee2 = new Employee("Fatima", "Fatima@email.com", "9876", "+448642650277", FINANCE_ANALYST, department2, 32, false);
         Employee employee3 = new Employee("Joshua", "Joshua@email.com", "9876", "+449536349802", WAREHOUSE_ASSOCIATE, department3, 40, false);
         Employee employee4 = new Employee("Kai", "Kai@email.com", "9876", "+442460363490", HR_SPECIALIST, department4, 25, false);
-        Employee employee5 = new Employee("Mark", "Mark@email.com", "9876", "+443371608374", SOLUTIONS_ARCHITECT, department5, 40, false);
+        Employee employee5 = new Employee("Mark", "Mark@email.com", "9876", "+443371608374", SOLUTIONS_ARCHITECT, department1, 40, false);
         Employee employee6 = new Employee("Dani", "Dani@email.com", "9876", "+447662901805", SOLUTIONS_ARCHITECT, department6, 25, false);
+        Employee employee7 = new Employee("Samson", "Samson@email.com", "9876", "+447662901605", LAWYER, department1, 55, false);
 
-        employeeRepository.saveAll(Arrays.asList(manager1, manager2, manager3, manager4, manager5, manager6, employee1, employee2, employee3, employee4, employee5, employee6));
+        employeeRepository.saveAll(Arrays.asList(manager1, manager2, manager3, manager4, manager5, manager6, employee1, employee2, employee3, employee4, employee5, employee6,employee7));
 
 
 //    Shifts
