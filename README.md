@@ -20,9 +20,16 @@
 9. [Tech Stack](#tech-stack)
 
 
+## Description 
+## Models
+## ERD
+### UML class diagram 
+### Service level 
 
 
 
+## How to use the API 
+### Restful routes
 |Controller | Mapping |Path | Description | Output | 
 |----------|-----------|------|-------------|--------|
 |Department|GET|http://localhost:8080/departments|index route|returns all department objects|
@@ -30,11 +37,20 @@
 |Employee|GET|http://localhost:8080/employees|index route|returns all employee objects|
 ||GET|http://localhost:8080/employees/{id}|show route|returns employee object with id= {id}|
 |       |GET|http://localhost:8080/employees/department/{id}||returns list of employee objects where department id={id}|
-|       |POST|http://localhost:8080/employees/login|takes a request json body containing the email and password |returns the logged in employee object|
-|    Shifts   |GET|http://localhost:8080/shifts|index route|returns all shift objects|
+|       |POST|http://localhost:8080/employees/login|request body: loginDTO = email , password |returns the logged in employee object|
+|    Shift   |GET|http://localhost:8080/shifts|index route|returns all shift objects|
 |       |GET|http://localhost:8080/shifts/{id}|show route|returns shift object with id= {id}|
 |       |GET|http://localhost:8080/shifts/dto||returns a shift dto object in the form |
-|       |GET|http://localhost:8080/shifts/employee/{}id||returns all the shift objects assigned to employeeid ={id}|
-|       |GET||||
-|       |GET||||
-|       |||||
+|       |GET|http://localhost:8080/shifts/employee/{id}||returns all the shift objects assigned to employeeid ={id}|
+|       |GET|http://localhost:8080/shifts/{type}|**|returns shift objects with type= {type}|
+|       |GET|http://localhost:8080/shifts/{date}|**|returns shift objects with date= {date}|
+|       |POST|http://localhost:8080/shifts|request body: shiftDTO = date, type, employeeId|returns the shift object that was just created|
+
+
+
+
+
+## React app 
+## 
+## Tech stack
+##
