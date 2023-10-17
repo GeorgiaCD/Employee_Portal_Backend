@@ -2,9 +2,11 @@ package com.bnta.capstone.components;
 
 import com.bnta.capstone.models.Department;
 import com.bnta.capstone.models.Employee;
+import com.bnta.capstone.models.Message;
 import com.bnta.capstone.models.Shift;
 import com.bnta.capstone.repositories.DepartmentRepository;
 import com.bnta.capstone.repositories.EmployeeRepository;
+import com.bnta.capstone.repositories.MessageRepository;
 import com.bnta.capstone.repositories.ShiftRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -28,6 +30,9 @@ public class DataLoader implements ApplicationRunner {
 
     @Autowired
     ShiftRepository shiftRepository;
+
+    @Autowired
+    MessageRepository messageRepository;
 
     public DataLoader(){
     }
@@ -156,7 +161,17 @@ public class DataLoader implements ApplicationRunner {
 
         shiftRepository.saveAll(Arrays.asList(morningShift21,morningShift22, morningShift23, morningShift24, morningShift25));
 
+
+//        messages
+        Message message1 = new Message("hello","god");
+        Message message2 = new Message("hello again","god");
+
+        messageRepository.saveAll(Arrays.asList(message1, message2));
+
+
     }
+
+
 
 
 }
