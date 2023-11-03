@@ -71,6 +71,13 @@ public class ShiftService {
         shiftRepository.deleteById(id);
     }
 
+    public void deleteShiftByDTO(ShiftDTO shiftDTO){
+        Shift shiftToBeDeleted = new Shift( shiftDTO.getDate(),
+                                            shiftDTO.getType(),
+                                            employeeService.findEmployeeById(shiftDTO.getEmployeeId()));
+        shiftRepository.delete(shiftToBeDeleted);
+    }
+
 
     }
 

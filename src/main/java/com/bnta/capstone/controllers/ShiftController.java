@@ -68,7 +68,11 @@ public class ShiftController {
         return new ResponseEntity<>(id, HttpStatus.OK);
     }
 
-    
+    @DeleteMapping
+    public ResponseEntity<Integer> deleteShiftByShiftDTO(@RequestBody ShiftDTO shiftDTO){
+        shiftService.deleteShiftByDTO(shiftDTO);
+        return new ResponseEntity<>(shiftDTO.getEmployeeId(), HttpStatus.OK);
+    }
 
 
 }
