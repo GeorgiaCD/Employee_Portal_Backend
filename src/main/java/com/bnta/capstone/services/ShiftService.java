@@ -67,7 +67,7 @@ public class ShiftService {
         return newShift;
     }
 
-    public void deleteShift(Integer id){
+    public void deleteShiftById(Integer id){
         shiftRepository.deleteById(id);
     }
 

@@ -62,5 +62,13 @@ public class ShiftController {
 
     }
 
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Integer> deleteShift(@PathVariable Integer id){
+        shiftService.deleteShiftById(id);
+        return new ResponseEntity<>(id, HttpStatus.OK);
+    }
+
+    
+
 
 }
