@@ -52,7 +52,7 @@ public class DataLoader implements ApplicationRunner {
 
 //        Employees
 //        Managers
-        Employee manager1 = new Employee("Jane", "Jane@email.com", "1234", "+44958572904", SOFTWARE_ENGINEER, department1, 50, true);
+        Employee manager1 = new Employee("Jane", "Jane@email.com", "1", "+44958572904", SOFTWARE_ENGINEER, department1, 50, true);
         Employee manager2 = new Employee("Patricia", "Patricia@email.com", "1234", "+44958572771", FINANCE_ANALYST, department2, 35, true);
         Employee manager3 = new Employee("Stacy", "Stacy@email.com", "1234", "+44953764889", WAREHOUSE_ASSOCIATE, department3, 40, true);
         Employee manager4 = new Employee("Lisa", "Lisa@email.com", "1234", "+44896764997", HR_SPECIALIST, department4, 30, true);

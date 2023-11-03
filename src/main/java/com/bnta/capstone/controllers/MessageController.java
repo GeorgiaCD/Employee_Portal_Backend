@@ -1,8 +1,6 @@
 package com.bnta.capstone.controllers;
 
-import com.bnta.capstone.models.Employee;
 import com.bnta.capstone.models.Message;
-import com.bnta.capstone.services.EmployeeService;
 import com.bnta.capstone.services.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,7 +20,7 @@ public class MessageController {
 
     //    INDEX
     @GetMapping
-    public ResponseEntity<List<Message>> getEmployees(){
+    public ResponseEntity<List<Message>> getMessages(){
         return new ResponseEntity<>(messageService.findAllMessages(), HttpStatus.OK);
     }
 }
